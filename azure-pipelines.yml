@@ -8,11 +8,6 @@ trigger:
 
 pool: 
   name: awsagent
-- task: DownloadBuildArtifacts@1
-  inputs:
-    buildType: 'current'
-    downloadType: 'single'
-    downloadPath: '$(System.ArtifactsDirectory)'
 
 steps:
 - task: Maven@3
