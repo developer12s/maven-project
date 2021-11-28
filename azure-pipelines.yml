@@ -6,7 +6,8 @@
 trigger:
 - master
 
-pool: awsagent
+pool: 
+  name: awsagent
 - task: DownloadBuildArtifacts@1
   inputs:
     buildType: 'current'
