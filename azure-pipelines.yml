@@ -6,7 +6,8 @@
 trigger:
 - master
 
-pool: awsagent
+pool:
+  name: awsagent
   demands:
     - agent.name -equals awsagent1
 
