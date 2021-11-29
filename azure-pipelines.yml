@@ -22,9 +22,4 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-- powershell: |
-   echo $(build.buildid)
-   
-   echo $(build.buildnumber)
-  displayName: 'PowerShell Script   
    
