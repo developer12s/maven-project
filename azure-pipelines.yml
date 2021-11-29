@@ -10,6 +10,12 @@ pool: aws agent
 
 steps:
 - task: Maven@3
+steps:
+- script: |
+   displayName: installing git
+   yum install java-1.8.0
+   
+  
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
