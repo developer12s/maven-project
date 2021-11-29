@@ -9,12 +9,23 @@ trigger:
 pool: aws agent
 
 steps:
+- script: |
+    java -version
+  env:
+    JAVA_HOME: $(JAVA_HOME_11_X64)
+    PATH: $(JAVA_HOME_11_X64)/bin:$(PATH)
 - task: Maven@3
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      echo "##vso[task.setvariable variable=JAVA_HOME]$(JAVA_HOME_11_X64)"
+      echo "##vso[task.setvariable variable=PATH]$(JAVA_HOME_11_X64)\bin;$(PATH)"
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
+    jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
