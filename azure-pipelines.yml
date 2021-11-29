@@ -11,11 +11,6 @@ pool:
   name: awsagent
 
 steps:
-- powershell: |
-   echo $(build.buildid)
-   
-   echo $(build.buildnumber)
-  displayName: 'PowerShell Script'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -27,4 +22,9 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- powershell: |
+   echo $(build.buildid)
+   
+   echo $(build.buildnumber)
+ displayName: 'PowerShell Script   
    
