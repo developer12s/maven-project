@@ -26,5 +26,5 @@ steps:
    echo $(build.buildid)
    
    echo $(build.buildnumber)
- displayName: 'PowerShell Script   
+  displayName: 'PowerShell Script   
    
