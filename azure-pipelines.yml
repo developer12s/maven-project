@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: Default
+pool: awsagent
 
 steps:
 - task: Maven@3
