@@ -16,8 +16,8 @@ steps:
     versionSpec: '8'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'LocalDirectory'
-    jdkFile: '/usr/lib/jvm/'
-    jdkDestinationDirectory: '/usr/lib/jvm'
+    jdkFile: '/usr/lib/jvm/java-11-openjdk-amd64'
+    jdkDestinationDirectory: '/usr/lib/jvm/java-11-openjdk-amd64'
     cleanDestinationDirectory: true
 
 - task: Maven@3
