@@ -11,6 +11,15 @@ pool:
   name: awsagent
 
 steps:
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '8'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'LocalDirectory'
+    jdkFile: '/usr/bin'
+    jdkDestinationDirectory: '/usr/bin'
+    cleanDestinationDirectory: true
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
