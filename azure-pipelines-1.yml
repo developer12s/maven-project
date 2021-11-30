@@ -7,8 +7,7 @@
 trigger:
 - master
 
-pool:
-  vmImage: ubuntu-latest
+pool: awsagent
 
 steps:
 - task: JavaToolInstaller@0
